@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weavesnwear — Handloom Textiles, Home Décor &amp; Menswear | Faridabad</title>
+<meta name="description" content="Weavesnwear — Exclusive handloom showroom in Basilva Colony, Faridabad. Handwoven textiles, home décor and men's wear where timeless tradition meets modern style.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --indigo-deep:#1c2a42;
+    --indigo-mid:#2b4368;
+    --indigo-soft:#3a577f;
+    --ivory:#f4ecda;
+    --ivory-soft:#ede2c9;
+    --ink:#221d16;
+    --gold:#c68a1d;
+    --gold-soft:#e0ac48;
+    --madder:#a6402e;
+    --thread:rgba(244,236,218,.32);
+    --max:1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Work Sans',sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    margin:0;
+    line-height:1.08;
+    letter-spacing:-.01em;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  section{padding:96px 0;}
+  @media(max-width:700px){section{padding:64px 0;}}
+
+  /* focus visibility */
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+    outline:2px solid var(--gold);outline-offset:3px;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+  }
+
+  /* ---------- announcement bar ---------- */
+  .announce{
+    background:var(--ink);
+    color:var(--ivory-soft);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.74rem;
+    letter-spacing:.04em;
+    text-align:center;
+    padding:9px 16px;
+  }
+  .announce a{color:var(--gold-soft);border-bottom:1px solid rgba(224,172,72,.4);}
+
+  /* ---------- nav ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(244,236,218,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(34,29,22,.08);
+  }
+  nav.wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:16px;padding-bottom:16px;
+  }
+  .logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;display:flex;align-items:baseline;gap:2px;}
+  .logo .n{font-style:italic;font-weight:400;color:var(--madder);font-size:1.1rem;padding:0 1px;}
+  .navlinks{display:flex;gap:34px;align-items:center;}
+  .navlinks a{font-size:.92rem;font-weight:500;position:relative;padding:4px 0;}
+  .navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--gold);transition:width .25s ease;}
+  .navlinks a:hover::after{width:100%;}
+  .nav-cta{
+    background:var(--indigo-deep);color:var(--ivory);
+    padding:10px 20px;border-radius:2px;font-size:.86rem;font-weight:600;
+    border:1px solid var(--indigo-deep);
+  }
+  .nav-cta:hover{background:transparent;color:var(--indigo-deep);}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+  .burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.25s;}
+  @media(max-width:860px){
+    .navlinks{
+      position:fixed;top:60px;left:0;right:0;
+      background:var(--ivory);flex-direction:column;gap:0;
+      max-height:0;overflow:hidden;transition:max-height .3s ease;
+      border-bottom:1px solid rgba(34,29,22,.08);
+    }
+    .navlinks.open{max-height:400px;}
+    .navlinks a{width:100%;padding:16px 28px;border-top:1px solid rgba(34,29,22,.06);}
+    .navlinks a::after{display:none;}
+    .nav-cta{margin:16px 28px 20px;text-align:center;}
+    .burger{display:block;}
+  }
+
+  /* ---------- weave divider (signature motif) ---------- */
+  .weave-divider{width:100%;height:26px;display:block;}
+  .weave-divider .warp{stroke:var(--thread);stroke-width:1;}
+  .weave-divider .weft{stroke:var(--gold-soft);stroke-width:1.4;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:
+      radial-gradient(ellipse at 15% 0%, var(--indigo-soft) 0%, transparent 55%),
+      linear-gradient(160deg, var(--indigo-deep) 0%, #16233a 100%);
+    color:var(--ivory);
+    position:relative;
+    overflow:hidden;
+    padding:0;
+  }
+  .hero-inner{
+    max-width:var(--max);margin:0 auto;padding:100px 28px 70px;
+    display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;
+  }
+  @media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding-top:56px;}}
+  .hero-eyebrow{color:var(--gold-soft);margin-bottom:22px;display:flex;align-items:center;gap:10px;}
+  .hero-eyebrow::before{content:"";width:26px;height:1px;background:var(--gold-soft);}
+  .hero h1{
+    font-size:clamp(2.4rem,5vw,4.1rem);
+    color:var(--ivory);
+  }
+  .hero h1 em{
+    font-style:italic;font-weight:400;color:var(--gold-soft);
+  }
+  .hero p.lede{
+    margin-top:26px;max-width:46ch;
+    font-size:1.12rem;color:rgba(244,236,218,.82);
+  }
+  .hero-ctas{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 26px;font-size:.92rem;font-weight:600;
+    border-radius:2px;border:1px solid transparent;cursor:pointer;
+    transition:all .22s ease;
+    font-family:'Work Sans',sans-serif;
+  }
+  .btn-gold{background:var(--gold);color:var(--indigo-deep);border-color:var(--gold);}
+  .btn-gold:hover{background:transparent;color:var(--gold-soft);border-color:var(--gold-soft);}
+  .btn-outline{border-color:rgba(244,236,218,.5);color:var(--ivory);}
+  .btn-outline:hover{background:rgba(244,236,218,.08);border-color:var(--ivory);}
+  .btn-dark{background:var(--indigo-deep);color:var(--ivory);border-color:var(--indigo-deep);}
+  .btn-dark:hover{background:transparent;color:var(--indigo-deep);}
+
+  /* animated loom graphic */
+  .loom{position:relative;width:100%;aspect-ratio:1/1.05;max-width:380px;justify-self:center;}
+  .loom svg{width:100%;height:100%;}
+  .loom .warp-line{stroke:rgba(244,236,218,.28);stroke-width:1;}
+  .loom .weft-line{
+    stroke:var(--gold-soft);stroke-width:2;fill:none;
+    stroke-dasharray:900;stroke-dashoffset:900;
+    animation:draw 2.6s ease forwards .4s;
+  }
+  .loom .weft-line.two{stroke:var(--madder);animation-delay:.9s;}
+  .loom .weft-line.three{stroke:rgba(244,236,218,.6);animation-delay:1.4s;}
+  @keyframes draw{to{stroke-dashoffset:0;}}
+
+  .hero-location{
+    margin-top:56px;display:flex;gap:28px;flex-wrap:wrap;
+    padding-top:28px;border-top:1px solid rgba(244,236,218,.16);
+  }
+  .hero-location .item{font-size:.88rem;color:rgba(244,236,218,.75);}
+  .hero-location .item b{display:block;color:var(--ivory);font-weight:600;font-size:.95rem;margin-bottom:2px;}
+
+  /* ---------- reveal on scroll ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.show{opacity:1;transform:none;}
+
+  /* ---------- intro ---------- */
+  .intro{text-align:center;}
+  .intro .eyebrow{color:var(--madder);justify-content:center;display:flex;margin-bottom:18px;}
+  .intro h2{font-size:clamp(1.7rem,3.4vw,2.5rem);max-width:20ch;margin:0 auto;}
+  .intro p{max-width:62ch;margin:24px auto 0;font-size:1.05rem;color:#4a4234;}
+
+  /* ---------- collections ---------- */
+  .collections-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+    margin-top:56px;background:rgba(34,29,22,.1);
+  }
+  @media(max-width:860px){.collections-grid{grid-template-columns:1fr;}}
+  .coll-card{
+    background:var(--ivory);padding:44px 36px;position:relative;
+    transition:background .3s ease;
+  }
+  .coll-card:hover{background:var(--ivory-soft);}
+  .coll-icon{width:52px;height:52px;margin-bottom:26px;}
+  .coll-card .tag{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);}
+  .coll-card h3{font-size:1.5rem;margin-top:10px;}
+  .coll-card p{color:#4a4234;font-size:.96rem;margin-top:14px;}
+  .coll-card .go{display:inline-flex;align-items:center;gap:6px;margin-top:22px;font-weight:600;font-size:.88rem;color:var(--indigo-deep);}
+  .coll-card .go svg{width:14px;transition:transform .2s ease;}
+  .coll-card:hover .go svg{transform:translateX(4px);}
+
+  /* ---------- craft story ---------- */
+  .craft{background:var(--indigo-deep);color:var(--ivory);}
+  .craft-head{max-width:56ch;}
+  .craft-head .eyebrow{color:var(--gold-soft);}
+  .craft-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin-top:18px;}
+  .craft-head p{color:rgba(244,236,218,.78);margin-top:20px;font-size:1.02rem;}
+  .craft-steps{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:64px;
+  }
+  @media(max-width:820px){.craft-steps{grid-template-columns:1fr;gap:36px;}}
+  .step{border-top:1px solid rgba(244,236,218,.22);padding-top:22px;}
+  .step .num{font-family:'IBM Plex Mono',monospace;color:var(--gold-soft);font-size:.85rem;}
+  .step h4{font-size:1.28rem;margin-top:14px;color:var(--ivory);font-weight:600;}
+  .step p{margin-top:12px;font-size:.94rem;color:rgba(244,236,218,.72);}
+
+  /* ---------- showroom ---------- */
+  .showroom{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  @media(max-width:860px){.showroom{grid-template-columns:1fr;gap:40px;}}
+  .showroom .eyebrow{color:var(--madder);margin-bottom:18px;}
+  .showroom h2{font-size:clamp(1.7rem,3.4vw,2.4rem);}
+  .showroom p{margin-top:18px;color:#4a4234;font-size:1.02rem;max-width:48ch;}
+  .addr-card{
+    margin-top:30px;background:var(--ivory-soft);border-left:3px solid var(--gold);
+    padding:22px 26px;
+  }
+  .addr-card b{display:block;font-family:'Fraunces',serif;font-size:1.15rem;margin-bottom:6px;}
+  .addr-card span{font-size:.92rem;color:#4a4234;display:block;line-height:1.6;}
+  .showroom-actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;}
+  .map-visual{
+    position:relative;aspect-ratio:4/3.4;background:var(--indigo-deep);
+    overflow:hidden;
+  }
+  .map-visual svg{width:100%;height:100%;}
+  .map-pin{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-100%);
+    width:34px;height:34px;
+  }
+
+  /* ---------- wholesale ---------- */
+  .wholesale{
+    background:linear-gradient(120deg,var(--madder) 0%, #8a3325 100%);
+    color:var(--ivory);text-align:center;
+  }
+  .wholesale .eyebrow{color:rgba(244,236,218,.85);justify-content:center;display:flex;}
+  .wholesale h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-top:18px;max-width:26ch;margin-left:auto;margin-right:auto;}
+  .wholesale p{margin-top:18px;max-width:56ch;margin-left:auto;margin-right:auto;color:rgba(244,236,218,.85);}
+  .wholesale-actions{margin-top:34px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+  .mail-pill{
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(244,236,218,.12);border:1px solid rgba(244,236,218,.4);
+    padding:14px 24px;border-radius:2px;font-weight:600;font-size:.95rem;
+  }
+  .mail-pill:hover{background:rgba(244,236,218,.2);}
+
+  /* ---------- contact form ---------- */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:44px;}}
+  .contact-side .eyebrow{color:var(--madder);}
+  .contact-side h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-top:18px;}
+  .contact-side p{margin-top:18px;color:#4a4234;max-width:42ch;}
+  .contact-side .clist{margin-top:34px;display:flex;flex-direction:column;gap:18px;}
+  .contact-side .clist div b{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);font-family:'IBM Plex Mono',monospace;font-weight:500;}
+  .contact-side .clist div span{font-size:1rem;margin-top:4px;display:block;}
+
+  form.card{
+    background:var(--ivory-soft);padding:40px;border:1px solid rgba(34,29,22,.08);
+  }
+  @media(max-width:500px){form.card{padding:28px 22px;}}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(max-width:560px){.form-row{grid-template-columns:1fr;}}
+  .field{margin-bottom:20px;}
+  .field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:8px;letter-spacing:.02em;}
+  .field input,.field select,.field textarea{
+    width:100%;padding:13px 14px;border:1px solid rgba(34,29,22,.18);
+    background:var(--ivory);font-family:'Work Sans',sans-serif;font-size:.96rem;
+    color:var(--ink);border-radius:1px;
+  }
+  .field textarea{min-height:120px;resize:vertical;}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--indigo-deep);}
+  .submit-row{display:flex;align-items:center;gap:18px;margin-top:6px;flex-wrap:wrap;}
+  .form-note{font-size:.8rem;color:#6b6353;}
+  .form-status{font-size:.88rem;font-weight:600;}
+  .form-status.ok{color:#3d6b3d;}
+  .form-status.err{color:var(--madder);}
+
+  /* ---------- shop online strip ---------- */
+  .shop-online{background:var(--indigo-mid);color:var(--ivory);text-align:center;}
+  .shop-online .eyebrow{color:var(--gold-soft);justify-content:center;display:flex;}
+  .shop-online h2{font-size:clamp(1.6rem,3.2vw,2.2rem);margin-top:16px;}
+  .shop-online p{margin-top:14px;color:rgba(244,236,218,.8);max-width:52ch;margin-left:auto;margin-right:auto;}
+  .shop-actions{margin-top:30px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+  .pill{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:13px 24px;border-radius:999px;font-weight:600;font-size:.92rem;
+    border:1px solid rgba(244,236,218,.4);transition:all .22s ease;
+  }
+  .pill.gold{background:var(--gold);border-color:var(--gold);color:var(--indigo-deep);}
+  .pill.gold:hover{background:transparent;color:var(--gold-soft);}
+  .pill.outline{color:var(--ivory);}
+  .pill.outline:hover{background:rgba(244,236,218,.12);}
+
+  /* ---------- terms & conditions ---------- */
+  .terms{background:var(--ivory-soft);}
+  .terms .eyebrow{color:var(--madder);}
+  .terms h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-top:16px;}
+  .terms .intro-note{margin-top:16px;max-width:64ch;color:#4a4234;font-size:.98rem;}
+  .accordion{margin-top:40px;border-top:1px solid rgba(34,29,22,.14);}
+  .accordion details{border-bottom:1px solid rgba(34,29,22,.14);}
+  .accordion summary{
+    list-style:none;cursor:pointer;padding:20px 4px;
+    display:flex;justify-content:space-between;align-items:center;gap:20px;
+    font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;
+  }
+  .accordion summary::-webkit-details-marker{display:none;}
+  .accordion summary .plus{
+    flex:none;width:20px;height:20px;position:relative;
+  }
+  .accordion summary .plus::before,.accordion summary .plus::after{
+    content:"";position:absolute;background:var(--indigo-deep);transition:transform .2s ease;
+  }
+  .accordion summary .plus::before{left:0;top:9px;width:20px;height:2px;}
+  .accordion summary .plus::after{left:9px;top:0;width:2px;height:20px;}
+  .accordion details[open] summary .plus::after{transform:rotate(90deg) translateX(0);opacity:0;}
+  .accordion .panel{padding:0 4px 24px;color:#4a4234;font-size:.94rem;max-width:74ch;}
+  .accordion .panel p{margin:0 0 12px;}
+  .accordion .panel ul{margin:0 0 12px;padding-left:20px;}
+  .accordion .panel li{margin-bottom:8px;}
+  .terms-footnote{margin-top:30px;font-size:.82rem;color:#6b6353;max-width:70ch;}
+
+  /* ---------- social icons ---------- */
+  .social-row{display:flex;gap:12px;align-items:center;}
+  .icon-btn{
+    width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    border:1px solid rgba(244,236,218,.4);color:var(--ivory);transition:all .2s ease;
+  }
+  .icon-btn:hover{background:rgba(244,236,218,.15);}
+  .icon-btn.dark{border-color:rgba(34,29,22,.2);color:var(--ink);}
+  .icon-btn.dark:hover{background:rgba(34,29,22,.06);}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:rgba(244,236,218,.72);padding:56px 0 28px;}
+  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:36px;}
+  .footer-brand .logo{color:var(--ivory);}
+  .footer-brand p{margin-top:14px;max-width:34ch;font-size:.9rem;color:rgba(244,236,218,.55);}
+  .footer-cols{display:flex;gap:60px;flex-wrap:wrap;}
+  .footer-col b{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:16px;}
+  .footer-col a,.footer-col span{display:block;font-size:.9rem;margin-bottom:10px;color:rgba(244,236,218,.75);}
+  .footer-col a:hover{color:var(--ivory);}
+  .footer-bottom{
+    margin-top:52px;padding-top:24px;border-top:1px solid rgba(244,236,218,.12);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    font-size:.8rem;color:rgba(244,236,218,.45);
+  }
+</style>
+</head>
+<body>
+
+<div class="announce">Exclusive handloom showroom now open — Basilva Colony, Faridabad &nbsp;·&nbsp; Wholesale enquiries: <a href="mailto:weavesnwear@gmail.com">weavesnwear@gmail.com</a></div>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo">WEAVES<span class="n">n</span>WEAR</a>
+    <div class="navlinks" id="navlinks">
+      <a href="#collections">Collections</a>
+      <a href="#craft">Our Craft</a>
+      <a href="#showroom">Showroom</a>
+      <a href="#wholesale">Wholesale</a>
+      <a href="https://www.instagram.com/weavesnwear" target="_blank" rel="noopener">Instagram</a>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow eyebrow">Handloom &nbsp;·&nbsp; Home &nbsp;·&nbsp; Menswear</div>
+        <h1>Where <em>timeless</em> tradition<br>meets modern style</h1>
+        <p class="lede">Weavesnwear brings handwoven textiles, home décor and men's wear together under one roof — crafted by hand, styled for today. Visit our exclusive showroom in Faridabad.</p>
+        <div class="hero-ctas">
+          <a href="#collections" class="btn btn-gold">Explore collections</a>
+          <a href="#showroom" class="btn btn-outline">Visit our showroom</a>
+        </div>
+        <div class="hero-location">
+          <div class="item"><b>Showroom</b>Basilva Colony, Faridabad</div>
+          <div class="item"><b>Wholesale</b>weavesnwear@gmail.com</div>
+          <div class="item"><b>Known for</b>Handloom · Décor · Menswear</div>
+          <div class="item"><b>Follow us</b><a href="https://www.instagram.com/weavesnwear" target="_blank" rel="noopener" style="color:var(--gold-soft);">@weavesnwear on Instagram</a></div>
+        </div>
+      </div>
+      <div class="loom" aria-hidden="true">
+        <svg viewBox="0 0 300 320" fill="none">
+          <!-- warp threads -->
+          <g class="warp-line">
+            <line x1="30" y1="10" x2="30" y2="310"/>
+            <line x1="60" y1="10" x2="60" y2="310"/>
+            <line x1="90" y1="10" x2="90" y2="310"/>
+            <line x1="120" y1="10" x2="120" y2="310"/>
+            <line x1="150" y1="10" x2="150" y2="310"/>
+            <line x1="180" y1="10" x2="180" y2="310"/>
+            <line x1="210" y1="10" x2="210" y2="310"/>
+            <line x1="240" y1="10" x2="240" y2="310"/>
+            <line x1="270" y1="10" x2="270" y2="310"/>
+          </g>
+          <!-- weft (woven) lines -->
+          <path class="weft-line" d="M10 60 Q30 48 60 60 T120 60 T180 60 T240 60 T290 60"/>
+          <path class="weft-line two" d="M10 160 Q30 148 60 160 T120 160 T180 160 T240 160 T290 160"/>
+          <path class="weft-line three" d="M10 250 Q30 238 60 250 T120 250 T180 250 T240 250 T290 250"/>
+        </svg>
+      </div>
+    </div>
+    <svg class="weave-divider" viewBox="0 0 1180 26" preserveAspectRatio="none">
+      <g class="warp">
+        <line x1="0" y1="0" x2="0" y2="26"/><line x1="30" y1="0" x2="30" y2="26"/><line x1="60" y1="0" x2="60" y2="26"/><line x1="90" y1="0" x2="90" y2="26"/><line x1="120" y1="0" x2="120" y2="26"/><line x1="150" y1="0" x2="150" y2="26"/><line x1="180" y1="0" x2="180" y2="26"/><line x1="210" y1="0" x2="210" y2="26"/><line x1="240" y1="0" x2="240" y2="26"/><line x1="270" y1="0" x2="270" y2="26"/><line x1="300" y1="0" x2="300" y2="26"/><line x1="330" y1="0" x2="330" y2="26"/><line x1="360" y1="0" x2="360" y2="26"/><line x1="390" y1="0" x2="390" y2="26"/><line x1="420" y1="0" x2="420" y2="26"/><line x1="450" y1="0" x2="450" y2="26"/><line x1="480" y1="0" x2="480" y2="26"/><line x1="510" y1="0" x2="510" y2="26"/><line x1="540" y1="0" x2="540" y2="26"/><line x1="570" y1="0" x2="570" y2="26"/><line x1="600" y1="0" x2="600" y2="26"/><line x1="630" y1="0" x2="630" y2="26"/><line x1="660" y1="0" x2="660" y2="26"/><line x1="690" y1="0" x2="690" y2="26"/><line x1="720" y1="0" x2="720" y2="26"/><line x1="750" y1="0" x2="750" y2="26"/><line x1="780" y1="0" x2="780" y2="26"/><line x1="810" y1="0" x2="810" y2="26"/><line x1="840" y1="0" x2="840" y2="26"/><line x1="870" y1="0" x2="870" y2="26"/><line x1="900" y1="0" x2="900" y2="26"/><line x1="930" y1="0" x2="930" y2="26"/><line x1="960" y1="0" x2="960" y2="26"/><line x1="990" y1="0" x2="990" y2="26"/><line x1="1020" y1="0" x2="1020" y2="26"/><line x1="1050" y1="0" x2="1050" y2="26"/><line x1="1080" y1="0" x2="1080" y2="26"/><line x1="1110" y1="0" x2="1110" y2="26"/><line x1="1140" y1="0" x2="1140" y2="26"/><line x1="1170" y1="0" x2="1170" y2="26"/>
+      </g>
+      <path class="weft" d="M0 13 Q15 4 30 13 T60 13 T90 13 T120 13 T150 13 T180 13 T210 13 T240 13 T270 13 T300 13 T330 13 T360 13 T390 13 T420 13 T450 13 T480 13 T510 13 T540 13 T570 13 T600 13 T630 13 T660 13 T690 13 T720 13 T750 13 T780 13 T810 13 T840 13 T870 13 T900 13 T930 13 T960 13 T990 13 T1020 13 T1050 13 T1080 13 T1110 13 T1140 13 T1170 13 T1180 13" fill="none"/>
+    </svg>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro reveal">
+    <div class="wrap">
+      <div class="eyebrow">Our philosophy</div>
+      <h2>Every thread carries a hand, a story, a place.</h2>
+      <p>We work directly with handloom weavers and craftspeople to bring authentic textiles into everyday life — as clothing, as home décor, as pieces you keep for years, not seasons. Weavesnwear is where old techniques get a new silhouette.</p>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section id="collections" class="reveal">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--madder)">What we make</div>
+      <h2 style="font-size:clamp(1.8rem,3.6vw,2.6rem);margin-top:16px;max-width:20ch;">Three collections, one loom</h2>
+
+      <div class="collections-grid">
+        <div class="coll-card">
+          <svg class="coll-icon" viewBox="0 0 52 52" fill="none">
+            <path d="M4 10h44M4 20h44M4 30h44M4 40h44" stroke="#2b4368" stroke-width="1.4"/>
+            <path d="M10 4v44M20 4v44M30 4v44M40 4v44" stroke="#c68a1d" stroke-width="1.2" opacity=".55"/>
+          </svg>
+          <div class="tag">Handloom Textiles</div>
+          <h3>Fabrics woven by hand</h3>
+          <p>Sarees, stoles, dress material and yardage handwoven in natural fibres — cotton, silk and blended weaves in traditional and contemporary patterns.</p>
+          <a href="#contact" class="go">Enquire about textiles
+            <svg viewBox="0 0 20 10" fill="none"><path d="M0 5h18M13 1l5 4-5 4" stroke="currentColor" stroke-width="1.4"/></svg>
+          </a>
+        </div>
+
+        <div class="coll-card">
+          <svg class="coll-icon" viewBox="0 0 52 52" fill="none">
+            <rect x="8" y="14" width="36" height="26" stroke="#2b4368" stroke-width="1.4"/>
+            <path d="M8 22h36M18 14v26M34 14v26" stroke="#c68a1d" stroke-width="1.1" opacity=".6"/>
+          </svg>
+          <div class="tag">Home Décor</div>
+          <h3>Handloom for the home</h3>
+          <p>Cushion covers, table linen, throws, curtains and floor coverings — handcrafted pieces that bring warmth and texture into every room.</p>
+          <a href="#contact" class="go">Enquire about décor
+            <svg viewBox="0 0 20 10" fill="none"><path d="M0 5h18M13 1l5 4-5 4" stroke="currentColor" stroke-width="1.4"/></svg>
+          </a>
+        </div>
+
+        <div class="coll-card">
+          <svg class="coll-icon" viewBox="0 0 52 52" fill="none">
+            <path d="M18 8l8 6 8-6 6 8-6 4v22H18V20l-6-4 6-8z" stroke="#2b4368" stroke-width="1.4" stroke-linejoin="round"/>
+          </svg>
+          <div class="tag">Men's Wear</div>
+          <h3>Latest designs, handloom base</h3>
+          <p>Shirts, kurtas and ethnic-fusion wear cut from handwoven fabric — current silhouettes built on traditional cloth.</p>
+          <a href="#contact" class="go">Enquire about menswear
+            <svg viewBox="0 0 20 10" fill="none"><path d="M0 5h18M13 1l5 4-5 4" stroke="currentColor" stroke-width="1.4"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="reveal" style="background:var(--ivory-soft);">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--madder)">Beyond the showroom</div>
+      <h2 style="font-size:clamp(1.8rem,3.6vw,2.6rem);margin-top:16px;max-width:24ch;">More ways to shop with us</h2>
+
+      <div class="collections-grid">
+        <div class="coll-card">
+          <svg class="coll-icon" viewBox="0 0 52 52" fill="none">
+            <rect x="6" y="18" width="40" height="26" rx="1" stroke="#2b4368" stroke-width="1.4"/>
+            <path d="M6 26h40" stroke="#c68a1d" stroke-width="1.1" opacity=".6"/>
+            <path d="M18 18v-4a8 8 0 0 1 16 0v4" stroke="#2b4368" stroke-width="1.4"/>
+          </svg>
+          <div class="tag">For Bulk Buyers</div>
+          <h3>Home demo, for bulk purchase</h3>
+          <p>Planning a bulk or wholesale order? We'll bring a curated selection to your home or office so you can see, touch and choose before you commit — by prior appointment.</p>
+          <a href="#contact" class="go">Book a home demo
+            <svg viewBox="0 0 20 10" fill="none"><path d="M0 5h18M13 1l5 4-5 4" stroke="currentColor" stroke-width="1.4"/></svg>
+          </a>
+        </div>
+
+        <div class="coll-card">
+          <svg class="coll-icon" viewBox="0 0 52 52" fill="none">
+            <rect x="10" y="16" width="32" height="28" stroke="#2b4368" stroke-width="1.4"/>
+            <path d="M10 24h32" stroke="#c68a1d" stroke-width="1.1" opacity=".6"/>
+            <path d="M26 16v28M18 16l8-8 8 8" stroke="#2b4368" stroke-width="1.4"/>
+          </svg>
+          <div class="tag">Corporate</div>
+          <h3>Corporate gifting &amp; custom packaging</h3>
+          <p>Handloom and décor pieces curated and packaged for corporate gifting — festive hampers, client gifts and employee gifting, with packaging tailored to your brand.</p>
+          <a href="#contact" class="go">Enquire about corporate gifting
+            <svg viewBox="0 0 20 10" fill="none"><path d="M0 5h18M13 1l5 4-5 4" stroke="currentColor" stroke-width="1.4"/></svg>
+          </a>
+        </div>
+
+        <div class="coll-card">
+          <svg class="coll-icon" viewBox="0 0 52 52" fill="none">
+            <path d="M26 8c-4 4-4 9 0 12 4-3 4-8 0-12z" stroke="#a6402e" stroke-width="1.4"/>
+            <path d="M10 44c2-10 8-16 16-16s14 6 16 16" stroke="#2b4368" stroke-width="1.4"/>
+          </svg>
+          <div class="tag">Weddings</div>
+          <h3>Wedding collections available</h3>
+          <p>From trousseau textiles to gifting for guests, our wedding collection covers what a celebration needs — available for both individual and bulk wedding orders.</p>
+          <a href="#contact" class="go">Enquire about wedding orders
+            <svg viewBox="0 0 20 10" fill="none"><path d="M0 5h18M13 1l5 4-5 4" stroke="currentColor" stroke-width="1.4"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP ONLINE -->
+  <section class="shop-online reveal">
+    <div class="wrap">
+      <div class="eyebrow">Shop online</div>
+      <h2>Prefer to shop from home?</h2>
+      <p>Find select Weavesnwear favourites on Amazon, or follow our Instagram for new arrivals, restocks and behind-the-loom stories.</p>
+      <div class="shop-actions">
+        <a href="#" id="amazonLink" target="_blank" rel="noopener sponsored" class="pill gold">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 17c4 3 12 3 16 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M17 15.5c1.5-.3 2.7-.8 3-1-.2 1-.8 3-2 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><rect x="7" y="6" width="10" height="8" rx="1" stroke="currentColor" stroke-width="1.4"/></svg>
+          Shop on Amazon
+        </a>
+        <a href="https://www.instagram.com/weavesnwear" target="_blank" rel="noopener" class="pill outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          @weavesnwear on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRAFT / PROCESS -->
+  <section id="craft" class="craft">
+    <div class="wrap">
+      <div class="craft-head reveal">
+        <div class="eyebrow">From yarn to you</div>
+        <h2>Nothing here is mass-produced.</h2>
+        <p>Each piece passes through real hands before it reaches yours — spun, dyed and woven on the loom, then finished into the textile, décor piece or garment you take home.</p>
+      </div>
+      <div class="craft-steps">
+        <div class="step reveal">
+          <div class="num">01 — Yarn</div>
+          <h4>Sourced &amp; spun</h4>
+          <p>Natural fibres are selected and spun into yarn, the raw material every piece begins as.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">02 — Loom</div>
+          <h4>Handwoven</h4>
+          <p>Weavers work the loom by hand, thread by thread, into cloth with its own texture and character.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">03 — You</div>
+          <h4>Made into your piece</h4>
+          <p>The finished cloth becomes a garment, a home décor piece, or fabric ready for your own use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWROOM -->
+  <section id="showroom">
+    <div class="wrap showroom">
+      <div class="reveal">
+        <div class="eyebrow">Visit us</div>
+        <h2>Our exclusive showroom in Faridabad</h2>
+        <p>Step in to see and feel the handloom difference — textiles, home décor and men's wear, all in one showroom.</p>
+        <div class="addr-card">
+          <b>Weavesnwear Showroom</b>
+          <span>Basilva Colony, Faridabad, Haryana, India</span>
+          <span style="margin-top:8px;">Open all days &nbsp;·&nbsp; 10:00 AM – 8:00 PM</span>
+        </div>
+        <div class="showroom-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Basilva+Colony+Faridabad" target="_blank" rel="noopener" class="btn btn-dark">Get directions</a>
+          <a href="#contact" class="btn btn-outline" style="color:var(--ink);border-color:rgba(34,29,22,.3);">Plan a visit</a>
+        </div>
+      </div>
+      <div class="map-visual reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 340" fill="none">
+          <rect width="400" height="340" fill="#1c2a42"/>
+          <g stroke="rgba(244,236,218,.16)" stroke-width="1">
+            <line x1="0" y1="60" x2="400" y2="60"/><line x1="0" y1="130" x2="400" y2="130"/>
+            <line x1="0" y1="200" x2="400" y2="200"/><line x1="0" y1="270" x2="400" y2="270"/>
+            <line x1="80" y1="0" x2="80" y2="340"/><line x1="180" y1="0" x2="180" y2="340"/>
+            <line x1="280" y1="0" x2="280" y2="340"/><line x1="340" y1="0" x2="340" y2="340"/>
+          </g>
+          <line x1="0" y1="170" x2="400" y2="170" stroke="#c68a1d" stroke-width="2.5" opacity=".8"/>
+          <circle cx="200" cy="150" r="8" fill="#a6402e"/>
+          <circle cx="200" cy="150" r="16" stroke="#a6402e" stroke-width="1.4" opacity=".5"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHOLESALE -->
+  <section id="wholesale" class="wholesale reveal">
+    <div class="wrap">
+      <div class="eyebrow">For retailers &amp; bulk buyers</div>
+      <h2>Looking to stock Weavesnwear?</h2>
+      <p>We work with retailers, boutiques and businesses on wholesale orders across handloom textiles, home décor and men's wear. Write to us with your requirement and we'll take it from there.</p>
+      <div class="wholesale-actions">
+        <a href="mailto:weavesnwear@gmail.com" class="mail-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 6h18v12H3z" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6"/></svg>
+          weavesnwear@gmail.com
+        </a>
+        <a href="#contact" class="btn btn-outline">Send a wholesale enquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-side reveal">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Let's talk textiles</h2>
+        <p>Retail questions, wholesale orders, or just want to know more about a piece — send us a message and our team will get back to you.</p>
+        <div class="clist">
+          <div><b>Showroom</b><span>Basilva Colony, Faridabad, Haryana</span></div>
+          <div><b>Wholesale</b><span>weavesnwear@gmail.com</span></div>
+        </div>
+      </div>
+
+      <form class="card reveal" id="contactForm" action="https://formspree.io/f/mgaeenrj" method="POST">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="field">
+            <label for="purpose">Purpose</label>
+            <select id="purpose" name="purpose">
+              <option>Retail enquiry</option>
+              <option>Wholesale enquiry</option>
+              <option>General question</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Tell us what you're looking for..."></textarea>
+        </div>
+        <div class="submit-row">
+          <button type="submit" class="btn btn-dark">Send message</button>
+          <span class="form-note">We usually reply within 1–2 business days.</span>
+        </div>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- TERMS & CONDITIONS -->
+  <section id="terms" class="terms reveal">
+    <div class="wrap">
+      <div class="eyebrow">Please read</div>
+      <h2>Terms &amp; Conditions</h2>
+      <p class="intro-note">These terms govern your purchase and use of products and services from Weavesnwear, including our showroom, wholesale, home demo, corporate gifting and wedding order services. By placing an order or using our services, you agree to the terms below.</p>
+
+      <div class="accordion">
+
+        <details>
+          <summary>1. Products &amp; Availability <span class="plus"></span></summary>
+          <div class="panel">
+            <p>All handloom products are handmade. Minor variation in colour, weave, texture and finish between pieces — and between the product and its photograph or website image — is a natural feature of handloom work and is not treated as a defect.</p>
+            <p>Products are subject to availability. Weavesnwear reserves the right to modify, discontinue or limit any product or collection without prior notice.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>2. Orders, Wholesale &amp; Bulk Purchases <span class="plus"></span></summary>
+          <div class="panel">
+            <p>Retail orders are confirmed once payment is received. Wholesale and bulk orders are confirmed only after a written or email quotation is accepted by the customer and any advance payment requested is received.</p>
+            <p>Home demo visits for bulk purchase are arranged by prior appointment and do not create any obligation to purchase on either side.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>3. Corporate Gifting &amp; Custom Packaging <span class="plus"></span></summary>
+          <div class="panel">
+            <p>Corporate gifting orders, custom packaging and any personalisation are made to the specifications confirmed by the customer in writing. Production begins only after design/specification and advance payment (where applicable) are confirmed.</p>
+            <p>Customised or personalised items are not eligible for return, exchange or cancellation once production has started, except where the item is defective.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>4. Wedding &amp; Trousseau Orders <span class="plus"></span></summary>
+          <div class="panel">
+            <p>Wedding and trousseau orders, given their volume and timelines, are recommended to be booked well in advance. Delivery dates communicated for such orders are estimates and depend on order size, customisation and season.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>5. Shipping, Delivery &amp; Returns <span class="plus"></span></summary>
+          <div class="panel">
+            <p>Delivery timelines shared at the time of order are estimates and may vary due to courier, transit or circumstances outside our control.</p>
+            <p>Returns and exchanges, where offered, must be raised within the timeframe communicated at the time of purchase, with the product unused and in its original condition. Products bought during sales, or customised/made-to-order items, may not be eligible for return or exchange.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>6. Limitation of Liability <span class="plus"></span></summary>
+          <div class="panel">
+            <p>Weavesnwear's total liability for any claim relating to a product or service is limited to the value of the specific order in question.</p>
+            <ul>
+              <li>Weavesnwear is not liable for any indirect, incidental or consequential loss, including loss of use, profit, or opportunity, arising from a purchase or service.</li>
+              <li>Weavesnwear is not liable for delays, loss or damage caused by third-party couriers, logistics partners, payment gateways, or events beyond its reasonable control (including but not limited to natural calamities, strikes, or government action).</li>
+              <li>Colour, texture and minor sizing variation inherent to handloom and handcrafted products does not constitute a defect and is not grounds for a liability claim.</li>
+              <li>Weavesnwear is not responsible for misuse, improper care, or damage to a product after delivery/handover.</li>
+              <li>Nothing in these terms limits liability that cannot be excluded under applicable law.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>7. Customer Escalation &amp; Grievance Redressal <span class="plus"></span></summary>
+          <div class="panel">
+            <p>Any concern regarding an order, product or service should first be raised with the showroom or by writing to <a href="mailto:weavesnwear@gmail.com" style="color:var(--madder);font-weight:600;">weavesnwear@gmail.com</a>, with the order details, so it can be looked into directly.</p>
+            <p>If a concern is not resolved to your satisfaction, it may be escalated in writing for a review by management; Weavesnwear's decision following that review is final. These terms, and any dispute arising from them, are governed by the laws of India, subject to the exclusive jurisdiction of the courts at Faridabad, Haryana.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>8. Customer Relationship &amp; Data <span class="plus"></span></summary>
+          <div class="panel">
+            <p>Customer details and the customer relationship arising from any purchase, enquiry, wholesale dealing, home demo, or corporate/wedding order — whether made directly, through the website, showroom, or a channel partner — belong to Weavesnwear.</p>
+            <p>Customer information shared with Weavesnwear is used only to fulfil orders, respond to enquiries, and share updates, and is not to be used or shared by any dealer, wholesaler or partner beyond the specific order or engagement they were involved in.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>9. Intellectual Property <span class="plus"></span></summary>
+          <div class="panel">
+            <p>The Weavesnwear name, logo, website content, product designs and photography are the property of Weavesnwear and may not be copied, reproduced or used commercially without written permission.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>10. Changes to These Terms <span class="plus"></span></summary>
+          <div class="panel">
+            <p>Weavesnwear may update these terms from time to time. The updated terms take effect once published on this page; continued use of our services after an update means you accept the revised terms.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <p class="terms-footnote">This page is a general statement of business terms and is provided for information only — it is not a substitute for formal legal advice. We recommend having these terms reviewed by a qualified lawyer for your specific business before relying on them.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="logo">WEAVES<span class="n">n</span>WEAR</a>
+        <p>Handloom textiles, home décor and men's wear from an exclusive showroom in Faridabad — where timeless tradition meets modern style.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <b>Explore</b>
+          <a href="#collections">Collections</a>
+          <a href="#craft">Our Craft</a>
+          <a href="#showroom">Showroom</a>
+        </div>
+        <div class="footer-col">
+          <b>Business</b>
+          <a href="#wholesale">Wholesale</a>
+          <a href="#services">Bulk &amp; Corporate</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <b>Reach us</b>
+          <span>Basilva Colony, Faridabad</span>
+          <a href="mailto:weavesnwear@gmail.com">weavesnwear@gmail.com</a>
+          <a href="https://www.instagram.com/weavesnwear" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" id="amazonLinkFooter" target="_blank" rel="noopener sponsored">Shop on Amazon</a>
+        </div>
+        <div class="footer-col">
+          <b>Legal</b>
+          <a href="#terms">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Weavesnwear. All rights reserved.</span>
+      <span>Handwoven with care.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  const burger = document.getElementById('burger');
+  const navlinks = document.getElementById('navlinks');
+  burger.addEventListener('click', () => {
+    const open = navlinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navlinks.classList.remove('open');
+    burger.setAttribute('aria-expanded', false);
+  }));
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Formspree AJAX submit
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Sending...';
+    status.className = 'form-status';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        status.textContent = 'Thank you — your message has been sent. We\'ll be in touch soon.';
+        status.className = 'form-status ok';
+        form.reset();
+      } else {
+        status.textContent = 'Something went wrong. Please try again or email weavesnwear@gmail.com directly.';
+        status.className = 'form-status err';
+      }
+    } catch (err) {
+      status.textContent = 'Something went wrong. Please try again or email weavesnwear@gmail.com directly.';
+      status.className = 'form-status err';
+    }
+  });
+</script>
+
+</body>
+</html>
